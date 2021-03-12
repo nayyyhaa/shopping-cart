@@ -1,0 +1,25 @@
+.site-header{
+        background-color: #a3b1ec;
+        color: azure;
+        height: 100vh;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+.profile{
+    box-shadow:#5264a6 2px 5px 5px;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+.site-content{
+    margin: 10px;
+}
+.course-link{
+    color: azure;
+}
+body{
+    margin: 0%;
+}
