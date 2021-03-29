@@ -1,0 +1,23 @@
+
+<p>
+  <a routerLink="/shipping">Shopping Prices</a>
+</p>
+<h1>Cart Items</h1>
+<div *ngIf="items.length!=0;else isBlank">
+  <div class="cart-item" *ngFor="let item of items">
+    <span>{{ item.name }}</span>
+    <span>{{ item.price | currency }}</span>
+  </div>
+  <form [formGroup]="shippingForm" (ngSubmit)="onSubmit()">
+    <label>Name:</label>
+    <input name="name">
+    <label>Address:</label>
+    <input name="address">
+    <button type="submit">Purchase</button>
+
+  </form>
+</div>
+<ng-template #isBlank>
+  <h2> Your cart is empty </h2>
+</ng-template>
+

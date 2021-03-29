@@ -1,0 +1,84 @@
+/* You can add global styles to this file, and also import other style files */
+.container {
+  display: flex;
+  flex-direction: row;
+}
+* {
+  font-family: "Roboto", Arial, sans-serif;
+  color: #616161;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+router-outlet + * {
+  padding: 0 16px;
+}
+
+body {
+  margin: 0;
+}
+h1 {
+    font-size: 32px;
+  }
+  
+  h2 {
+    font-size: 20px;
+  }
+  
+  h1, h2 {
+    font-weight: lighter;
+  }
+
+a {
+    cursor :pointer;
+    color: #0f488d;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+app-top-bar{
+    width: 100%;
+    height: 65px;
+    padding: 16px;
+    background-color: #1976d2;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+app-top-bar h1 {
+    color: white;
+    margin: 0;
+  }
+
+/*button*/
+.button:hover,
+button:hover {
+  opacity: 0.8;
+  font-weight: normal;
+}
+
+.fancy-button {
+    background-color: white;
+    color: #1976d2;
+  }
+
+  .fancy-button i.material-icons {
+    color: #1976d2;
+    padding-right: 4px;
+  }
+  .cart-item,
+  .shipping-item {
+    width: 100%;
+    min-width: 400px;
+    max-width: 450px;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    padding: 16px 32px;
+    margin-bottom: 8px;
+    border-radius: 2px;
+    background-color: #eeeeee;
+  }
