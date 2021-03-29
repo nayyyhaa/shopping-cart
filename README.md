@@ -58,14 +58,41 @@ Structural directives shape or reshape the DOM's structure, by adding, removing,
             
   ##### In, src/app/product-list/product-list.component.html
             
-                   `<h2>Products</h2>
-                     <div *ngFor="let product of products">
+                    <h2>Products</h2>
+                     <div *ngFor="let product of products"> //<div> repeats for each product in the list.
                         <h3>
                             <a [title]="product.name + ' details'">
-                              {{ product.name }}
+                              {{ product.name }} //Interpolation :{{ }} lets you render the property value as text
                             </a>
                         </h3>
-                      </div>`
+                        <p *ngIf="product.description"> //Angular only creates the <p> element if the current product has a description.
+                            Description: {{ product.description }}
+                        </p>
+                        <button (click)="share()"> //Event binding uses a set of parentheses, ( ), around the event, as in the (click) event on the <button> element.
+                              Share
+                        </button>
+                     </div>
 - Property, Event Binding and Interpolation (explained above)
+- Nesting child component 
+
+  @Input() and @Output() give a child component a way to communicate with its parent component.
+       
+       A) Pass data to a child component
+            @Input() decorator indicates that the property value passes in from the component's parent
+       B) Pass data to a parent component
+            @Output() allows the child to send data to a parent component.  
+
+- Routing & Navigation // In-App navigation by Router Module, ActivatedRoute
+ 
+  ActivatedRoute is specific to each component that the Angular Router loads. ActivatedRoute contains information about the route and the route's parameters.
+  By injecting ActivatedRoute, we are configuring the component to use a service.
+- Angular Services and Dependency Injection. 
+
+  A service is an instance of a class that you can make available to any part of your application using Angular's dependency injection system.
+  I used this to create Cart Service.
+- AsyncPipe API
+
+  For Configuring the ShippingComponent to use CartService
+- Http Client-Server Interaction
 
 # Checkout full app - > https://nenexone.netlify.app/
