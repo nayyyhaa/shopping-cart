@@ -33,7 +33,7 @@ import { ReactiveFormsModule } from '@angular/forms';
       {path:'',component: ProductListComponent},
       {path:'products/:productId', component:ProductDetailComponent},
       {path: 'cart', component:CartComponent},
-      {path: 'shipping', component:ShippingComponent},
+      {path: 'cart/shipping', component:ShippingComponent},
     ])
   ],
   providers: [],
