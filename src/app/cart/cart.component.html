@@ -7,6 +7,7 @@
   <div class="cart-item" *ngFor="let item of items">
     <span>{{ item.name }}</span>
     <span>{{ item.price | currency }}</span>
+    <button (click)="deleteItem(item)">deleteItem</button>
   </div>
   <form [formGroup]="shippingForm" (ngSubmit)="onSubmit()">
     <label>Name:</label>

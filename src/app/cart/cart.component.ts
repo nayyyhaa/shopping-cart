@@ -23,5 +23,8 @@ export class CartComponent implements OnInit {
     this.shippingForm.reset;
   }
 
+  deleteItem(item) {
+    this.items = this.cartService.deleteFromCart(item);
+  }
 
 }
